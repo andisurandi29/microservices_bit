@@ -13,7 +13,7 @@ RUN npm install
 COPY . .
 
 # 5. Generate Prisma Client
-RUN npx prisma generate
+RUN npx prisma generate || true
 
 # 6. Build TypeScript ke JavaScript
 RUN npm run build 
